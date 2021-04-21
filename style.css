@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    padding: 2vw;
+    position: fixed; 
+    background-color: #fff;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+nav a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 1.5vw;
+}
+
+section{
+    margin-bottom: 10vh;
+}
+
+#splash-page {
+    margin-top: 10vh;
+    position: relative;
+    height: 935px;
+}
+
+#BWEmma {
+    position: absolute;
+    right: 10vw;
+    z-index: 1;
+}
+
+/* det här kommer bli ett problem */
+#pink1 {
+    position: absolute;
+    right: 8vw;
+    top: 10vh;
+    height: 73vh;
+    width: 32vw;
+    z-index: 0;
+}
+
