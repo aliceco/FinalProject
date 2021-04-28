@@ -1,8 +1,17 @@
 /* 
-    1. underline about me when scrolled down
+    1. responsive tablet about me 
     2. footer
     3. rest of the freaking pages
+        - decide the layout for photos and films
+    4. animation on pictures and text?
+    5. scroll animation about me 
+    6. WRITE IN ALT FOR PICTRUES
 */
+
+
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   padding: 0;
@@ -53,7 +62,6 @@ nav a.active::after {
 }
 
 section {
-
   display: grid;
   grid-template-columns: repeat(50, 2vw);
   grid-template-rows: repeat(20, 2vw);
@@ -108,12 +116,14 @@ section img {
   width: 6vw;
   height: 3.5vw;
   z-index: 3;
+  cursor: pointer;
 }
 
 footer {
   text-align: center;
   margin: 1vw 0 1vw 0;
-}
+  width: 100%;
+} 
 
 /* Splas-page */
 #splash-page {
@@ -187,7 +197,7 @@ footer {
 /* about me */
 
 #about-me {
-  margin-top: 15vh;
+  margin-top: 14vh;
 }
 
 #title-about {
