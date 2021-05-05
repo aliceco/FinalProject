@@ -2,10 +2,12 @@
     1. responsive tablet about me 
     2. footer
     3. rest of the freaking pages
-        - decide the layout for photos and films
+        - decide the layout for photos
+        - decide layout for bloggs and social media
     4. animation on pictures and text?
-    5. scroll animation about me 
+    5. dot navigation gilm/photos?
     6. WRITE IN ALT FOR PICTRUES
+    7. Im having cookie-issues
 */
 
 html {
@@ -38,7 +40,22 @@ nav a {
   position: relative;
 }
 
+/*
+nav #marker {
+  position: absolute;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background: #000;
+  bottom: 1.2vw;
+  transition: 0.5s;
+  border-radius: 4px;
+
+}
+*/
+
 /* the animated underline */
+
 nav a.active::after {
   position: absolute;
   content: "";
@@ -252,23 +269,59 @@ footer {
 
 /* ---------  FILM/PHOTOS ------------- */
 /* kanske kan va en egen klass som återanvänds */
+
 .film-title-container {
   margin: 15vh 35% 0 35%;
   text-align: center;
-
 }
 
 .film-text-container {
   margin: 2vw 20% 0 20%;
   text-align: center;
   line-height: 1.5vw;
-  background-color:  #ffe7fe;
+  background-color: #ffe7fe;
   padding: 1.5vw 2vw 1.5vw 2vw;
+  color: black;
 }
 
 #film-title {
   padding: 2.5vw 5vw 2.5vw 5vw;
 }
+
+#film-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+}
+
+.rows {
+  padding: 2vw 2vw 0 2vw;
+}
+
+object {
+  width: 25vw;
+  height: 15vw;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+}
+
+#film-container a {
+  margin-top: 2vw;
+  font-size: 1.2rem;
+  padding: 1vw;
+  background-color: #ffe7fe;
+  border-radius: 2vw;
+  color: black;
+}
+
+#film-container a:hover {
+  background-color: #f7d2f5;
+}
+
 
 /* tablet */
 @media (max-width: 800px) {
