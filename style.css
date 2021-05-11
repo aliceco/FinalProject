@@ -1,5 +1,5 @@
 /* 
-    1. responsive tablet about me 
+    1. fonnt-size classes
     2. footer
     3. rest of the freaking pages
         - decide the layout for photos
@@ -33,26 +33,12 @@ nav {
 }
 
 nav a {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 1.5vw;
   color: black;
   cursor: pointer;
   position: relative;
 }
-
-/*
-nav #marker {
-  position: absolute;
-  left: 0;
-  height: 4px;
-  width: 0;
-  background: #000;
-  bottom: 1.2vw;
-  transition: 0.5s;
-  border-radius: 4px;
-
-}
-*/
 
 /* the animated underline */
 
@@ -84,7 +70,7 @@ section {
   grid-template-rows: repeat(20, 2vw);
 }
 
-section img {
+section img , #photo-gallery img {
   width: 100%;
   height: 100%;
 }
@@ -217,7 +203,7 @@ footer {
 }
 
 #title-about {
-  grid-column: 12 / 22;
+  grid-column: 11 / 21;
   grid-row: 2 / 5;
   display: flex;
   justify-content: center;
@@ -226,20 +212,25 @@ footer {
 }
 
 #about-me-text {
-  grid-column: 10 / 24;
+  grid-column: 7 / 26;
   grid-row: 5 / 16;
   line-height: 1.5vw;
 }
 
 #about-me-text p {
   padding-top: 2vw;
+  font-size: 1.3vw;
 }
 
 #buisness {
-  grid-column: 10 / 19;
+  grid-column: 10 / 22;
   grid-row: 16 / 19;
   padding: 2vw;
   background-color: #ffe7fe;
+}
+
+#buisness p {
+  font-size: 1.3vw;
 }
 
 #youtube-page {
@@ -275,6 +266,11 @@ footer {
   text-align: center;
 }
 
+.film-page-title {
+  padding: 2.5vw 5vw 2.5vw 5vw;
+  font-size: 1.2vw;
+}
+
 .film-text-container {
   margin: 2vw 20% 0 20%;
   text-align: center;
@@ -282,10 +278,8 @@ footer {
   background-color: #ffe7fe;
   padding: 1.5vw 2vw 1.5vw 2vw;
   color: black;
-}
-
-#film-title {
-  padding: 2.5vw 5vw 2.5vw 5vw;
+  font-size: 1vw;
+  border-radius: 0.3vw;
 }
 
 #film-container {
@@ -311,7 +305,7 @@ object {
 
 #film-container a {
   margin-top: 2vw;
-  font-size: 1.2rem;
+  font-size: 1.3vw;
   padding: 1vw;
   background-color: #ffe7fe;
   border-radius: 2vw;
@@ -322,14 +316,125 @@ object {
   background-color: #f7d2f5;
 }
 
+#photo-gallery {
+  margin-top: 3vw;
+  display: grid;
+  grid-template-columns: repeat(50, 2vw);
+  grid-template-rows: repeat(65, 2vw);
+}
+
+.vertical-column-1 {
+  grid-column: 3 / 12;
+}
+
+.horizontal-column-1 {
+  grid-column: 14 / 25;
+}
+
+.vertical-column-2 {
+  grid-column: 27 / 36;
+}
+
+.horizontal-column-2 {
+  grid-column: 38 / 49;
+}
+
+.vertical-row-1 {
+  grid-row: 1 / 15;
+}
+
+.horizontal-row-1 {
+  grid-row: 4 / 12;
+}
+
+.vertical-column-3 {
+  grid-column: 15 / 24;
+}
+
+.vertical-row-2 {
+  grid-row:15 / 29; 
+}
+
+.vertical-column-4 {
+  grid-column: 39 / 48;
+}
+
+.horizontal-column-3 {
+  grid-column: 2 / 13;
+}
+
+.horizontal-column-4 {
+  grid-column: 26 / 37;
+}
+
+.horizontal-row-2 {
+  grid-row: 18 / 26;
+}
+
+.vertical-row-3 {
+  grid-row: 29 / 43;
+}
+
+.horizontal-row-3 {
+  grid-row: 32 / 40;
+}
+
+/* the three photos on the bottom */
+.horizontal-column-5 {
+  grid-column: 3 / 17;
+}
+.horizontal-column-6 {
+  grid-column: 19 / 33;
+}
+
+.horizontal-column-7 {
+  grid-column: 35 / 48;
+}
+
+.horizontal-row-4 {
+  grid-row: 46 / 54;
+}
+
+.horizontal-row-5 {
+  grid-row: 57 / 65;
+}
 
 /* tablet */
-@media (max-width: 800px) {
-  #title-container h1 {
+@media (max-width: 900px) {
+  #title-container h1 , #title-about h1{
     font-size: 1.2rem;
   }
 
   #title-container h2 {
     font-size: 1rem;
   }
+
+  /* film/photos */
+
+#youtube-page {
+  grid-column: 29 / 45;
+  grid-row: 1 / 10;
+  box-shadow: 2vw 2vw 0 0 #ffe7fe;
+  z-index: 1;
 }
+
+#emma2 {
+  grid-column: 38 / 46;
+  grid-row: 6 / 17;
+  box-shadow: 2vw 2vw 0 0 #ffe7fe;
+  z-index: 2;
+}
+
+#wowkamera {
+  grid-column: 32 /39;
+  grid-row: 12 / 19;
+  z-index: 2;
+}
+
+#pink-shadow3 {
+  grid-column: 33 / 40;
+  grid-row: 15 / 20;
+}
+
+}
+
