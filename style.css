@@ -23,6 +23,14 @@ a {
   text-decoration: none;
 }
 
+.italic {
+  font-style: italic;
+}
+
+.h1-font-size {
+  font-size: 2rem;
+}
+
 nav {
   padding: 2vw;
   position: fixed;
@@ -64,13 +72,18 @@ nav a.active::after {
   }
 }
 
+#mobile-nav {
+  display: none;
+}
+
 section {
   display: grid;
   grid-template-columns: repeat(50, 2vw);
   grid-template-rows: repeat(20, 2vw);
 }
 
-section img , #photo-gallery img {
+section img,
+#photo-gallery img {
   width: 100%;
   height: 100%;
 }
@@ -105,14 +118,6 @@ section img , #photo-gallery img {
   bottom: 0;
   border-bottom: 0.2vw solid black;
   border-right: 0.2vw solid black;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.h1-font-size {
-  font-size: 2rem;
 }
 
 #fish-logo {
@@ -225,7 +230,10 @@ footer {
 #buisness {
   grid-column: 10 / 22;
   grid-row: 16 / 19;
-  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2vw;
   background-color: #ffe7fe;
 }
 
@@ -260,6 +268,24 @@ footer {
 
 /* ---------  FILM/PHOTOS ------------- */
 /* kanske kan va en egen klass som återanvänds */
+
+#dot-nav {
+  position: fixed;
+  left: 1.5vw;
+  top: 50%;
+}
+
+.dots {
+  background: #ffe7fe;
+  border-radius: 50%;
+  width: 1vw;
+  height: 1vw;
+  margin-top: 0.2vw;
+}
+
+#dot-nav a {
+  margin-left: 1.5vw;
+}
 
 .film-title-container {
   margin: 15vh 35% 0 35%;
@@ -352,7 +378,7 @@ object {
 }
 
 .vertical-row-2 {
-  grid-row:15 / 29; 
+  grid-row: 15 / 29;
 }
 
 .vertical-column-4 {
@@ -388,7 +414,7 @@ object {
 }
 
 .horizontal-column-7 {
-  grid-column: 35 / 48;
+  grid-column: 35 / 49;
 }
 
 .horizontal-row-4 {
@@ -399,9 +425,233 @@ object {
   grid-row: 57 / 65;
 }
 
+/* Mobile */
+
+@media (max-width: 500px) {
+  nav {
+    display: none;
+  }
+
+  #mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw;
+  }
+
+  #fish-logo-mobile {
+    width: 20vw;
+  }
+
+  .open-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: white;
+  }
+
+  .sidepanel {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    background: #f7d2f5;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 6vw;
+  }
+
+  .sidepanel a {
+    padding: 1rem 0 1rem 3rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 1vw;
+    right: 3vw;
+    font-size: 2rem;
+    margin-left: 50px;
+  }
+
+  #fish-logo {
+    display: none;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: repeat(20, 5vw);
+    grid-template-rows: repeat(40, 5vw);
+  }
+  /* splash page */
+
+  #splash-page {
+    margin-top: 0vw;
+  }
+
+  #title-container {
+    grid-column: 6 / 16;
+    grid-row: 2 / 6;
+  }
+
+  #BWEmma {
+    grid-column: 9 / 18;
+    grid-row: 7 / 20;
+    z-index: 2;
+  }
+
+  #pink-shadow1 {
+    grid-column: 10 / 19;
+    grid-row: 8 / 21;
+    z-index: 0;
+  }
+
+  #emmawcamera {
+    grid-column: 3 / 15;
+    grid-row: 19 / 26;
+    z-index: 1;
+  }
+
+  #emma1 {
+    grid-column: 4 / 11;
+    grid-row: 25 / 34;
+    box-shadow: none;
+    z-index: 2;
+  }
+
+  #amsterdam {
+    grid-column: 9 /19;
+    grid-row: 29 / 37;
+    z-index: 1;
+    box-shadow: 5vw 5vw 0 0 #ffe7fe;
+  }
+
+  #pink-box1 {
+    grid-column: 4 / 16;
+    grid-row: 21 / 27;
+    z-index: 0;
+  }
+
+  #pink-shadow2 {
+    grid-column: 5 / 12;
+    grid-row: 27 / 35;
+    z-index: 0;
+  }
+
+  /* About me */
+
+  #about-me {
+    margin-top: 0vh;
+  }
+  #title-about {
+    grid-column: 6 / 16;
+    grid-row: 2 / 5;
+  }
+  #about-me-text {
+    grid-column: 4 / 18;
+    grid-row: 6 / 25;
+    line-height: 5vw;
+  }
+
+  #about-me-text p {
+    padding-top: 4vw;
+    font-size: 4.5vw;
+  }
+
+  #buisness {
+    grid-column: 6 / 16;
+    grid-row: 25 / 28;
+    padding: 2vw;
+  }
+  #buisness p {
+    font-size: 3vw;
+  }
+
+  #youtube-page {
+    grid-column: 4 / 18;
+    grid-row: 30 / 37;
+    box-shadow: 5vw 5vw 0 0 #ffe7fe;
+    z-index: 1;
+  }
+
+  #emma2 {
+    display: none;
+  }
+
+  #wowkamera {
+    grid-column: 7 / 12;
+    grid-row: 35 / 40;
+    z-index: 3;
+  }
+
+  #pink-shadow3 {
+    grid-column: 8 / 13;
+    grid-row: 37 / 41;
+  }
+
+  /* Film/photos */
+
+  .film-page-title {
+    padding: 2.5vw 5vw 2.5vw 5vw;
+    font-size: 2.5vw;
+  }
+
+  .film-title-container {
+    margin: 1vh 30% 0 30%;
+  }
+
+  .film-text-container {
+    margin: 2vw 15% 0 15%;
+    line-height: 3.5vw;
+    padding: 1.5vw 2vw 1.5vw 2vw;
+    font-size: 2vw;
+  }
+
+  #film-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+  }
+
+  .rows {
+    padding: 2vw 2vw 0 2vw;
+  }
+
+  object {
+    width: 25vw;
+    height: 15vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+  }
+
+  #film-container a {
+    margin-top: 2vw;
+    font-size: 1.3vw;
+    padding: 1vw;
+    background-color: #ffe7fe;
+    border-radius: 2vw;
+    color: black;
+  }
+
+  #film-container a:hover {
+    background-color: #f7d2f5;
+  }
+}
+
 /* tablet */
 @media (max-width: 900px) {
-  #title-container h1 , #title-about h1{
+  #title-container h1,
+  #title-about h1 {
     font-size: 1.2rem;
   }
 
@@ -410,31 +660,4 @@ object {
   }
 
   /* film/photos */
-
-#youtube-page {
-  grid-column: 29 / 45;
-  grid-row: 1 / 10;
-  box-shadow: 2vw 2vw 0 0 #ffe7fe;
-  z-index: 1;
 }
-
-#emma2 {
-  grid-column: 38 / 46;
-  grid-row: 6 / 17;
-  box-shadow: 2vw 2vw 0 0 #ffe7fe;
-  z-index: 2;
-}
-
-#wowkamera {
-  grid-column: 32 /39;
-  grid-row: 12 / 19;
-  z-index: 2;
-}
-
-#pink-shadow3 {
-  grid-column: 33 / 40;
-  grid-row: 15 / 20;
-}
-
-}
-
