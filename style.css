@@ -1,5 +1,5 @@
 /* 
-    1. fonnt-size classes
+    1. font-size classes
     2. footer
     3. rest of the freaking pages
         - decide the layout for photos
@@ -269,23 +269,6 @@ footer {
 /* ---------  FILM/PHOTOS ------------- */
 /* kanske kan va en egen klass som återanvänds */
 
-#dot-nav {
-  position: fixed;
-  left: 1.5vw;
-  top: 50%;
-}
-
-.dots {
-  background: #ffe7fe;
-  border-radius: 50%;
-  width: 1vw;
-  height: 1vw;
-  margin-top: 0.2vw;
-}
-
-#dot-nav a {
-  margin-left: 1.5vw;
-}
 
 .film-title-container {
   margin: 15vh 35% 0 35%;
@@ -423,6 +406,59 @@ object {
 
 .horizontal-row-5 {
   grid-row: 57 / 65;
+}
+
+
+/* --------- Blog --------- */
+
+#blog-title {
+  margin: 10vw 30% 0 30%;
+  padding: 4vw;
+  text-align: center;
+}
+
+#blog-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 3vw;
+  background-color: #f7d2f5;
+}
+
+#blog-nav button {
+  background-color: #f7d2f5;
+  border: none;
+  padding: 1.5vw;
+  cursor: pointer;
+}
+
+#blog-posts-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 25vw 0 25vw;
+}
+
+.blog-post {
+  padding: 3vw;
+  border-bottom: solid;
+  border-color: #d4d2d2a8;
+  border-width: 0.1vw;
+}
+
+.blog-post p {
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+}
+
+.date {
+  color: gray;
+}
+
+#blog-nav button:hover {
+  background-color: #dfa8dc;
+}
+
+#twentytwentyone {
+  display: none;
 }
 
 /* Mobile */
@@ -598,7 +634,6 @@ object {
   /* Film/photos */
 
   .film-page-title {
-    padding: 2.5vw 5vw 2.5vw 5vw;
     font-size: 2.5vw;
   }
 
@@ -607,44 +642,28 @@ object {
   }
 
   .film-text-container {
-    margin: 2vw 15% 0 15%;
     line-height: 3.5vw;
-    padding: 1.5vw 2vw 1.5vw 2vw;
-    font-size: 2vw;
-  }
-
-  #film-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 3vw;
-    margin-bottom: 3vw;
-  }
-
-  .rows {
-    padding: 2vw 2vw 0 2vw;
-  }
-
-  object {
-    width: 25vw;
-    height: 15vw;
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
+    font-size: 2.5vw;
   }
 
   #film-container a {
-    margin-top: 2vw;
-    font-size: 1.3vw;
-    padding: 1vw;
-    background-color: #ffe7fe;
-    border-radius: 2vw;
-    color: black;
+    font-size: 2.5vw;
   }
 
-  #film-container a:hover {
-    background-color: #f7d2f5;
+  /* Blog */
+
+  #blog-title {
+    margin: 5vw 20% 5vw 20%;
+  }
+
+  #blog-posts-container {
+    padding: 2vw 10vw 0 10vw;
+  }
+.blog-post h2 {
+  font-size: 5vw;
+}
+  .blog-post p , .blog-post a{
+    font-size: 3vw;
   }
 }
 
