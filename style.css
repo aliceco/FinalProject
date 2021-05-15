@@ -27,10 +27,6 @@ a {
   font-style: italic;
 }
 
-.h1-font-size {
-  font-size: 2rem;
-}
-
 nav {
   padding: 2vw;
   position: fixed;
@@ -41,7 +37,7 @@ nav {
 }
 
 nav a {
-  font-size: 1.1rem;
+  font-size: 1.1vw;
   padding: 1.5vw;
   color: black;
   cursor: pointer;
@@ -120,6 +116,13 @@ section img,
   border-right: 0.2vw solid black;
 }
 
+.title-container {
+  margin: 15vh 35% 0 35%;
+  padding: 2.5vw 5vw 2.5vw 5vw;
+  text-align: center;
+   font-size: 1.2vw;
+}
+
 #fish-logo {
   position: fixed;
   bottom: 4vh;
@@ -140,6 +143,10 @@ footer {
 
 #splash-page {
   margin-top: 8vh;
+}
+
+#title-container h1 {
+  font-size: 1.5vw;
 }
 
 #title-container {
@@ -208,12 +215,12 @@ footer {
 }
 
 #title-about {
+  font-size: 1vw;
   grid-column: 11 / 21;
   grid-row: 2 / 5;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
 }
 
 #about-me-text {
@@ -224,10 +231,11 @@ footer {
 
 #about-me-text p {
   padding-top: 2vw;
-  font-size: 1.3vw;
+  font-size: 1vw;
 }
 
 #buisness {
+  font-size: 1vw;
   grid-column: 10 / 22;
   grid-row: 16 / 19;
   display: flex;
@@ -235,10 +243,6 @@ footer {
   justify-content: center;
   padding-left: 2vw;
   background-color: #ffe7fe;
-}
-
-#buisness p {
-  font-size: 1.3vw;
 }
 
 #youtube-page {
@@ -269,7 +273,6 @@ footer {
 /* ---------  FILM/PHOTOS ------------- */
 /* kanske kan va en egen klass som återanvänds */
 
-
 .film-title-container {
   margin: 15vh 35% 0 35%;
   text-align: center;
@@ -277,7 +280,7 @@ footer {
 
 .film-page-title {
   padding: 2.5vw 5vw 2.5vw 5vw;
-  font-size: 1.2vw;
+  font-size: 1.5vw;
 }
 
 .film-text-container {
@@ -287,7 +290,7 @@ footer {
   background-color: #ffe7fe;
   padding: 1.5vw 2vw 1.5vw 2vw;
   color: black;
-  font-size: 1vw;
+  font-size: 1.2vw;
   border-radius: 0.3vw;
 }
 
@@ -314,7 +317,7 @@ object {
 
 #film-container a {
   margin-top: 2vw;
-  font-size: 1.3vw;
+ 
   padding: 1vw;
   background-color: #ffe7fe;
   border-radius: 2vw;
@@ -411,12 +414,6 @@ object {
 
 /* --------- Blog --------- */
 
-#blog-title {
-  margin: 10vw 30% 0 30%;
-  padding: 4vw;
-  text-align: center;
-}
-
 #blog-nav {
   display: flex;
   justify-content: center;
@@ -449,6 +446,14 @@ object {
   padding-bottom: 2vw;
 }
 
+.blog-post h2 {
+  font-size: 1.5vw;
+}
+
+.blog-post a , .blog-post p{
+  font-size: 1.2vw;
+}
+
 .date {
   color: gray;
 }
@@ -461,6 +466,53 @@ object {
   display: none;
 }
 
+/* social */
+
+#social-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2vw 10vw 0 10vw;
+}
+
+#social-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5vw;
+}
+
+#social-container p , #social-container a {
+  padding: 0.5vw;
+  font-size: 1vw;
+}
+
+#social-img {
+  display: grid;
+  grid-template-columns: repeat(20, 2vw);
+  grid-template-rows: repeat(18, 2vw);
+}
+
+#social-img img{
+  width: 100%;
+  height: 100%;
+}
+
+#socials {
+  grid-column: 10 / 18;
+  grid-row: 2 / 13;
+  box-shadow: 2vw 2vw 0 0 #ffe7fe;
+  z-index: 0;
+}
+
+#socials3 {
+  grid-column: 2 / 13;
+  grid-row: 9 / 16;
+  z-index: 1;
+}
+
+#socials-pink {
+  grid-column: 3 / 14;
+  grid-row: 10 / 17;
+}
 /* Mobile */
 
 @media (max-width: 500px) {
@@ -518,6 +570,12 @@ object {
 
   #fish-logo {
     display: none;
+  }
+
+  .title-container {
+    margin: 2vh 25% 0 25%;
+    padding: 5vw 10vw 5vw 10vw;
+    font-size: 2.5vw;
   }
 
   section {
@@ -665,6 +723,7 @@ object {
   .blog-post p , .blog-post a{
     font-size: 3vw;
   }
+
 }
 
 /* tablet */
@@ -678,5 +737,11 @@ object {
     font-size: 1rem;
   }
 
-  /* film/photos */
+  .title-container {
+    margin: 10vh 30% 0 30%;
+    padding: 2.5vw 5vw 2.5vw 5vw;
+     font-size: 1.5vw;
+  }
+  
+
 }
